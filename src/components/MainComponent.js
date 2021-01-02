@@ -6,6 +6,7 @@ import Footer from "./FooterComponent";
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { CARDS } from "../shared/cards";
 
 
 
@@ -13,7 +14,9 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 class Main extends Component {
     constructor(props) {
         super(props);
-        this.state ={};
+        this.state ={
+            cards: CARDS
+        };
     }
 
 
@@ -25,6 +28,8 @@ class Main extends Component {
         const HomePage = () => {
             return (
                 <Home
+
+                card={this.state.cards.filter(card => card.featured)[0]}
                    
                 />
             );
