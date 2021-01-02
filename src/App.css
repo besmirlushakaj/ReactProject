@@ -1,38 +1,386 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #cdceca; }
+
+h1,
+h2,
+h3 {
+  font-family: "Lobster", cursive; }
+
+h2 {
+  color: #3046C5; }
+
+header h2 {
+  color: #CEC8FF; }
+
+.site-footer {
+  background-image: linear-gradient(#c8ffdf, #1cc71c);
+  padding: 20px 0; }
+
+.jumbotron {
+  margin: 0;
+  padding: 40px;
+  background-image: linear-gradient(to right, #c8ffdf, #1cc71c);
+  color: white; }
+
+.breadcrumb {
+  margin-bottom: 0; }
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px; }
+
+.navbar {
+  background-color: #282729; }
+
+.bg-overlay {
+ /* background: url("/img/group-people-tablet-chart.jpg");*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 400px;
+  padding-top: 50px; }
+
+#wdImg {
+ /* background: url("../img/humming-bird.jpg");*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position: center left;
+  height: 400px;
+  object-fit: cover; }
+
+.centered {
+  position: absolute;
+  top: 35%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white; }
+
+/* My borders showing different div 
+.col, div[class^="col-"], label[class^="col-"] {
+    border: 1px solid red;
+    margin: 2px; 
+    
+} 
+
+.row {
+    border: 3px solid blue;
+    padding: 2px;
+    margin: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container, .container-fluid {
+    border: 3px solid green;
+    padding: 2px;
+    margin: 5px;    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.media {
+    border: 3px solid yellow;
+    padding: 2px;
+    margin: 5px;       
+}  
+
+.card {
+    border: 3px solid purple;
+    padding: 2px;
+    margin: 5px;    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.orange-border {
+
+    border: 1px solid green;
+
+}   
+*/
+.card-horizontal {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  flex: 1 1 auto; }
 
-.App-link {
-  color: #61dafb;
-}
+.carousel-caption {
+  top: 35%;
+  bottom: auto; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section {
+  /*padding: 25vh 10%;*/
+  position: relative;
+  /*min-height: 100vh;*/
+  width: 100vw;
+  transform-style: inherit; }
+
+section,
+section:before {
+  background: 50% 50% / cover; }
+
+section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+/* The brightest duotone color */
+.darken::before {
+  background-color: #ddcc00; }
+
+/* The darkest duotone color */
+.lighten::after {
+  background-color: #dd0000; }
+
+#hero-1:before {
+  /*background-image: url("../img/globe-on-chalkboard.jpg");*/
+  /*transform: translateZ(-1px) scale(2);
+    z-index: -1;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position: center left;
+  height: 450px;
+  object-fit: cover; }
+
+#hero-2:before {
+  /*background-image: url("../img/content-management-keyboard.jpg");*/
+  /*transform: translateZ(-1px) scale(2);
+    z-index: -2;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+  background-position: center left;
+  height: 450px;
+  object-fit: cover; }
+
+#hero-3:before {
+  /*background-image: url("../img/spider-web.jpg");*/
+  background-attachment: fixed;
+  z-index: -3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+  background-position: center left;
+  height: 450px;
+  object-fit: cover; }
+
+.normal-scroll .container {
+  color: #ccc;
+  font-size: 4vw;
+  margin: 0 auto;
+  padding: 25vh 0;
+  text-align: center;
+  width: 100%; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  #section-5:before {
+    background-attachment: scroll; } }
+
+.embed-responsive-100x400px {
+  padding-bottom: 400px; }
+
+#team .card {
+  border: none;
+  background: #ffffff; }
+
+.card:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: .25rem; }
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  /*-moz-transform: perspective(1000px);*/
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative; }
+
+.frontside {
+  position: relative;
+  /*-webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);*/
+  z-index: 2;
+  margin-bottom: 30px; }
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(192, 57, 43, 0.8) !important;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); }
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  -ms-transition: 1s;
+  transform-style: preserve-3d; }
+
+/*.frontside .card,
+.backside .card {
+    min-height: 312px;
+    min-height: 370px;
+}*/
+.backside .card a {
+  font-size: 18px;
+  color: #007b5e !important; }
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  /*color: #007b5e !important;*/
+  height: 45px;
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, rgba(64, 64, 66, 0.8) 0, #4a4a4d 100%); }
+
+.frontside .card-body,
+.backside .card-body {
+  padding: 0; }
+
+.frontside .card .cover img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  /*border-radius: 50%;*/ }
+
+.card .footer {
+  border-top: 1px solid #EEEEEE;
+  color: #999999;
+  margin: 30px 0 0;
+  padding: 10px 0 0;
+  text-align: center; }
+
+.card .footer .social-links {
+  font-size: 18px; }
+
+.card .footer .social-links a {
+  margin: 0 7px; }
+
+.card .footer .btn-simple {
+  margin-top: -6px; }
+
+/* Coloring indicatores
+#content-block{
+    position: relative;
+    overflow: hidden;
 }
+.parallax-clip{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-size: cover;
+    background-position:center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #007b5e;
+    text-align: center;
+    
+    
+}
+.fixed-parallax:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}*/
+.parallax {
+  /*background: url("../img/globe-on-chalkboard.jpg");*/
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.parallax1 {
+  /*background: url("../img/group-people-tablet-chart.jpg");*/
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.parallax2 {
+  /*background: url("../img/green-matrix-marketing.jpg");*/
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.parallax3 {
+  /*background: url("../img/stressed-man-desk.jpg");*/
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.normal-scroll .container {
+  color: #202423;
+  font-size: 4vw;
+  margin: 0auto;
+  padding: 25vh 0;
+  text-align: center;
+  width: 100%; }
+
+/* div embaded image */
+.divContact {
+  width: 100%;
+  /*background: url("../img/contact-us-customer-support-hotline-people-connect-call-customer-support_36325-1640.jpg");*/
+  background-size: cover;
+  background-position: center left;
+  height: 400px;
+  object-fit: cover; }
+
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white; }
+
+#loginModal .modal-header {
+  background-color: #69ad1c;
+  color: white; }
