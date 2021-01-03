@@ -1,23 +1,22 @@
 import React from 'react';
-import RenderCard from "./CardComponent";
+import { RenderCardHomeComponent } from "./CardComponent";
+import { CardGroup } from 'reactstrap';
 
 
-
-
-function Home(props) {
+function Home({ cards }) {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-md m-1">
-                    <RenderCard item={props.card} />
-
-                </div>
-                <div className="col-md m-1">
-
-                </div>
-                <div className="col-md m-1">
-
-                </div>
+                <CardGroup>
+                    {cards.map(card => {
+                        return (
+                            <div className="col-lg-4 d-flex align-items-stretch my-3" key={card.id} id={card.id}>
+                                <RenderCardHomeComponent item={card} />
+                            </div>
+                        );
+                    })
+                    }
+                </CardGroup>
             </div>
         </div>
     );
