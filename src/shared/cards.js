@@ -4,6 +4,7 @@ export const CARDS = [
         name: "Web Development",
         image: "/assets/images/web development.jpeg",
         homeComponent: true,
+        webDelopmentComponent: false,
         description: `We develop top quality web applications which are not restricted to just providing information.
         We link your website to your local systems and to familiar sites, like Twitter, Facebook,
         LinkedIn or Google Maps. These features are bundled in our own user-friendly CMS which
@@ -14,16 +15,36 @@ export const CARDS = [
     },
     {
         id: 1,
-        name: "Card image",
-        image: "/assets/image/student-recruitment-agency1.jpg",
+        name: "Consultancy",
+        image: "/assets/images/student-recruitment-agency1.jpg",
         homeComponent: true,
-        description: "Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers."
+        webDelopmentComponent: false,
+        description: `We develop top quality web applications which are not restricted to just providing information. We link your website to your local systems and to familiar sites, like Twitter,
+         Facebook, LinkedIn or Google Maps.
+          Is a feature you want not available yet? Then we will tailor-make it for you.`,
+          buttonContent: "Need Advice?"
+          
     },
     {
         id: 2,
-        name: "Card image",
-        image: "/assets/image/b4939e93d18ff65cfdd8b8baf148989d.gif",
+        name: "Web Design",
+        image: "/assets/images/b4939e93d18ff65cfdd8b8baf148989d.gif",
         homeComponent: true,
-        description: "Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers."
+        webDelopmentComponent: false,
+        description: `We develop top quality web applications which are not restricted to just providing information.
+         We link your website to your local systems and to familiar sites, like Twitter, Facebook, LinkedIn or Google Maps.`,
+         buttonContent: "Need our creativity"
+    },
+    {
+        id: 3,
+        name: "Web Design",
+        image: "/assets/images/b4939e93d18ff65cfdd8b8baf148989d.gif",
+        homeComponent: false,
+        webDelopmentComponent: true,
+        description: `We develop top quality web applications which are not restricted to just providing information.
+         We link your website to your local systems and to familiar sites, like Twitter, Facebook, LinkedIn or Google Maps.`,
+         buttonContent: "Need our creativity"
     }
+
+    
 ]
