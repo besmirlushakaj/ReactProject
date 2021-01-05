@@ -1,24 +1,22 @@
 import React from 'react';
-import { RenderCardWebDevelopmentComponent } from "./CardComponent";
-import { CardGroup } from 'reactstrap';
+import { RenderMediaWebDevelopmentComponent } from "./MediaComponent";
+import { Media } from 'reactstrap';
 
+function WebDelopment({ media }) {
+    const mediaList = media.map(itemMedia => {
+        return (
+            <Media tag="li" key={itemMedia.id}>
+                <RenderMediaWebDevelopmentComponent item={itemMedia} />
+            </Media>
+        );
+    });
 
-function WebDelopment({ cards }) {
     return (
-        <div className="container">
-            <div className="row">
-                <CardGroup>
-                    {cards.map(card => {
-                        return (
-                            <div className="col d-flex align-items-stretch my-3" key={card.id} id={card.id}>
-                                <RenderCardWebDevelopmentComponent item={card} />
-                            </div>
-                        );
-                    })
-                    }
-                </CardGroup>
-            </div>
-        </div>
+
+        <Media list>
+            {mediaList}
+        </Media>
+
     );
 }
 

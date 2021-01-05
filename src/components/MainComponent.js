@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
@@ -7,18 +6,19 @@ import WebDelopment from './WebDelopmentComponent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { CARDS } from "../shared/cards";
+import { MEDIA } from "../shared/media";
 
 
 class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cards: CARDS
+            cards: CARDS,
+            media: MEDIA
         };
     }
 
     render() {
-
         const HomePage = () => {
             return (
                 <Home
@@ -27,10 +27,10 @@ class Main extends Component {
             );
         };
 
-        const WebDevelopmentPage = () => {
+        const WedDevelopmentPage = () => {
             return (
                 <WebDelopment
-                    cards={this.state.cards.filter(card => card.webDelopmentComponent)}
+                    media={this.state.media.filter(itemMedia => itemMedia.webDevelopmentComponent)}
                 />
             );
         };
@@ -40,7 +40,7 @@ class Main extends Component {
                 <Header />
                 <Switch>
                     <Route path='/home' component={HomePage} />
-                    <Route path='/webdevelopment' component={WebDevelopmentPage} />
+                    <Route path='/webdevelopment' component={WedDevelopmentPage} />
                     <Route exact path='/contactus' component={Contact} />
                     <Redirect to='/home' />
                 </Switch>
