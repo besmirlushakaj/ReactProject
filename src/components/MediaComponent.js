@@ -45,7 +45,7 @@ export function RenderMediaWebDevelopmentComponent({ item }) {
     return <div />
 }
 
-export function RenderMediaRecruitmentSolutionsComponent({ item }) {
+export function RenderMediaWebDesignComponent({ item }) {
     if (item) {
         return (
             <React.Fragment>
@@ -83,6 +83,63 @@ export function RenderMediaRecruitmentSolutionsComponent({ item }) {
                     }
 
                 </div>
+            </React.Fragment>
+        );
+    }
+    return <div />
+}
+
+export function RenderMediaRecruitmentSolutionsComponent({ item }) {
+    if (item) {
+        return (
+            <React.Fragment>
+                {
+                    item.id === 5 ?
+                        (
+                            <React.Fragment>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-12 mt-3">
+                                            <div class="card">
+                                                <div class="card-horizontal">
+                                                    <div className="card shadow">
+                                                        <Media object src={item.image} alt={item.name} style={{ width: "568px", height: "350px" }} />
+                                                    </div>
+                                                    <Media body className="pl-5" style={{ backgroundColor: "lightgrey" }}>
+                                                        <Media heading tag="h1" >{item.name}</Media>
+                                                        <Media heading tag="h3" >{item.subtitle}</Media>
+                                                        {item.description}
+                                                    </Media>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </React.Fragment>
+                        ) : (
+                            <React.Fragment>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-12 mt-3">
+                                            <div class="card">
+                                                <div class="card-horizontal">
+                                                    <div className="card shadow">
+                                                        <Media object src={item.image} alt={item.name} style={{ width: "568px", height: "350px" }} />
+                                                    </div>
+                                                    <Media body className="ml-5">
+                                                        <Media heading tag="h1" >{item.name}</Media>
+                                                        <Media heading tag="h3" >{item.subtitle}</Media>
+                                                        {item.description}
+                                                    </Media>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </React.Fragment>
+                        )
+
+                }
             </React.Fragment>
         );
     }

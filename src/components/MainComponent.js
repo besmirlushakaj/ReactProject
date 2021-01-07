@@ -3,11 +3,13 @@ import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from './HomeComponent';
 import WebDelopment from './WebDelopmentComponent';
+import WebDesign from './WebDesignComponent';
 import RecruitmentSolutions from './RecruitmentSolutionsCompnent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { CARDS } from "../shared/cards";
 import { MEDIA } from "../shared/media";
+
 
 
 class Main extends Component {
@@ -36,6 +38,14 @@ class Main extends Component {
             );
         };
 
+        const WebDesignPage = () => {
+            return (
+                <WebDesign
+                    media={this.state.media.filter(itemMedia => itemMedia.webDesignComponent)}
+                />
+            );
+        };
+
         const RecruitmentSolutionsPage = () => {
             return (
                 <RecruitmentSolutions
@@ -50,6 +60,7 @@ class Main extends Component {
                 <Switch>
                     <Route path='/home' component={HomePage} />
                     <Route path='/webdevelopment' component={WedDevelopmentPage} />
+                    <Route path='/webdesign' component={WebDesignPage} />
                     <Route path='/recruitmentsolutions' component={RecruitmentSolutionsPage} />
                     <Route exact path='/contactus' component={Contact} />
                     <Redirect to='/home' />
