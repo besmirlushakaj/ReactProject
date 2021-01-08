@@ -9,6 +9,7 @@ import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { CARDS } from "../shared/cards";
 import { MEDIA } from "../shared/media";
+import { CAROUSEL } from "../shared/carousel";
 
 
 
@@ -17,7 +18,8 @@ class Main extends Component {
         super(props);
         this.state = {
             cards: CARDS,
-            media: MEDIA
+            media: MEDIA,
+            carousel: CAROUSEL
         };
     }
 
@@ -26,6 +28,8 @@ class Main extends Component {
             return (
                 <Home
                     cards={this.state.cards.filter(card => card.homeComponent)}
+                    carousel={this.state.carousel.filter(item => item.homeComponent)}
+                    
                 />
             );
         };
@@ -34,6 +38,7 @@ class Main extends Component {
             return (
                 <WebDelopment
                     media={this.state.media.filter(itemMedia => itemMedia.webDevelopmentComponent)}
+                    carousel={this.state.carousel.filter(item => item.webDevelopment)}
                 />
             );
         };

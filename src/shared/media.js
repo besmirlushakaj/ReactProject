@@ -91,33 +91,52 @@ export const MEDIA = [
     {
         id: 7,
         name: "Web Design",
-        subtitle: "Do you settle for a mediocre website or do you opt for top quality?",
-        image: "/assets/images/monkey-receive-peanut.jpg",
+        subtitle: "",
+        image: "/assets/images/man-desk-graphic-design.jpg",
         webDesignComponent: true,
-        description: ` `,
+        description: `The most important aspect of design is to successfully communicate
+        information. The message itself is determined by you, but the design is a vital
+        factor in just how the message is perceived by the target audience. We are experts
+        in graphic and web design. It doesn't matter to us whether we need to design
+        something completely new, evolve a design or implement an existing design or
+        house-style.
+        And of course our creativity goes hand in hand with our technical expertise. `,
         leftContent: "Yes"
     },
     {
         id: 8,
         name: "MOBILE FRIENDLY WEBSITES",
-        subtitle: "Struggling with your content management?",
-        image: "/assets/images/content-management-keyboard.jpg",
+        subtitle: "",
+        image: "/assets/images/desktop-tablet-mobile.jpg",
         webDesignComponent: true,
-        description: `Bit Agency has the ultimate enterprise grade Content Management System for you!
-        Our CMS is easy to use and will save you time and money because content can be updated online by your
-        team`,
+        description: `People expect websites to adapt 'automagically' to the device they
+        use,
+        be it a desktop, notebook, tablet or smartphone.
+
+        The solution: Responsive web design.
+        Rest assure Bit Agency has all the expertise needed to produce the optimal solution
+        for you.`,
         leftContent: "No"
     },
     {
         id: 9,
         name: "FRONT-END DEVELOPMENT",
-        subtitle: "Even our 'standard' solutions are amazing, but we don't stop there",
-        image: "/assets/images/swan-duck-pound.jpg",
+        subtitle: "",
+        image: "/assets/images/screen-html-code.jpg",
         webDesignComponent: true,
-        description: `There are a lot of agencies out there providing low cost websites. But if you pay peanuts you'll get
-        monkeys.
-        Too often those websites turn out to be a tin snail under the hood.
-        At Bit Agency, we deliver top quality at a fair price.`,
+        description: `With every iteration of browser version many new technologies are
+        introduced
+        and many old ones are abandoned. Websites and web applications are becoming
+        increasingly important to companies and at the same time the technologies available
+        get more and more complex to implement.
+
+        To make sure the end-user has the right experience it is paramount to know what you
+        are doing. Gone are the days of mere HTML coding, long live Front-end Development.
+        At Bit Agency, Web and Responsive Design goes hand in hand with Front-end
+        Development. Our Front-end Developers are Designers at heart and vice versa. They
+        create all that's needed so you can just use our CMS without being
+        bothered with complicated technical aspects, while the end-user gets the intended
+        experience.`,
         leftContent: "Yes"
     }
 
