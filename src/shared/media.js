@@ -138,6 +138,53 @@ export const MEDIA = [
         bothered with complicated technical aspects, while the end-user gets the intended
         experience.`,
         leftContent: "Yes"
+    },
+    {
+        id: 10,
+        name: "Shop with us",
+        subtitle: "",
+        image: "/assets/images/man-desk-graphic-design.jpg",
+        shopComponent: true,
+        description: `The most important aspect of design is to successfully communicate
+        information. The message itself is determined by you, but the design is a vital
+        factor in just how the message is perceived by the target audience. We are experts
+        in graphic and web design. It doesn't matter to us whether we need to design
+        something completely new, evolve a design or implement an existing design or
+        house-style.
+        And of course our creativity goes hand in hand with our technical expertise. `,
+        leftContent: "Yes"
+    },
+    {
+        id: 11,
+        name: "Web Design",
+        subtitle: "",
+        image: "/assets/images/man-desk-graphic-design.jpg",
+        shopComponent: true,
+        description: `The most important aspect of design is to successfully communicate
+        information. The message itself is determined by you, but the design is a vital
+        factor in just how the message is perceived by the target audience. We are experts
+        in graphic and web design. It doesn't matter to us whether we need to design
+        something completely new, evolve a design or implement an existing design or
+        house-style.
+        And of course our creativity goes hand in hand with our technical expertise. `,
+        leftContent: "Yes"
+    },
+    {
+        id: 12,
+        name: "Web Design",
+        subtitle: "",
+        image: "/assets/images/man-desk-graphic-design.jpg",
+        shopComponent: true,
+        description: `The most important aspect of design is to successfully communicate
+        information. The message itself is determined by you, but the design is a vital
+        factor in just how the message is perceived by the target audience. We are experts
+        in graphic and web design. It doesn't matter to us whether we need to design
+        something completely new, evolve a design or implement an existing design or
+        house-style.
+        And of course our creativity goes hand in hand with our technical expertise. `,
+        leftContent: "Yes"
     }
+
+
 
 ]

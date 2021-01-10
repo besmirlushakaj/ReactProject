@@ -10,6 +10,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { CARDS } from "../shared/cards";
 import { MEDIA } from "../shared/media";
 import { CAROUSEL } from "../shared/carousel";
+import Shop from './ShopComponent';
 
 
 
@@ -50,6 +51,15 @@ class Main extends Component {
                 />
             );
         };
+        const ShopPage = () => {
+            return (
+                <Shop
+                    media={this.state.media.filter(itemMedia => itemMedia.shopComponent)}
+                />
+            );
+        };
+
+
 
         const RecruitmentSolutionsPage = () => {
             return (
@@ -66,6 +76,7 @@ class Main extends Component {
                     <Route path='/home' component={HomePage} />
                     <Route path='/webdevelopment' component={WedDevelopmentPage} />
                     <Route path='/webdesign' component={WebDesignPage} />
+                    <Route path='/shop' component={ShopPage} />
                     <Route path='/recruitmentsolutions' component={RecruitmentSolutionsPage} />
                     <Route exact path='/contactus' component={Contact} />
                     <Redirect to='/home' />
