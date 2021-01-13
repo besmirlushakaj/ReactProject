@@ -11,6 +11,7 @@ import { CARDS } from "../shared/cards";
 import { MEDIA } from "../shared/media";
 import { CAROUSEL } from "../shared/carousel";
 import Shop from './ShopComponent';
+import AboutUs from './AboutUsComponent';
 
 
 
@@ -58,6 +59,13 @@ class Main extends Component {
                 />
             );
         };
+        const AboutUsPage = () => {
+            return (
+                <AboutUs
+                    media={this.state.media.filter(itemMedia => itemMedia.aboutusComponent)}
+                />
+            );
+        };
 
 
 
@@ -79,6 +87,7 @@ class Main extends Component {
                     <Route path='/shop' component={ShopPage} />
                     <Route path='/recruitmentsolutions' component={RecruitmentSolutionsPage} />
                     <Route exact path='/contactus' component={Contact} />
+                    <Route  path='/aboutus' component={AboutUsPage} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />

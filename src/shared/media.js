@@ -183,6 +183,36 @@ export const MEDIA = [
         house-style.
         And of course our creativity goes hand in hand with our technical expertise. `,
         leftContent: "Yes"
+    },
+    {
+        id: 13,
+        name: "About Us",
+        subtitle: "",
+        image: "/assets/images/man-desk-graphic-design.jpg",
+        aboutusComponent: true,
+        description: `The most important aspect of design is to successfully communicate
+        information. The message itself is determined by you, but the design is a vital
+        factor in just how the message is perceived by the target audience. We are experts
+        in graphic and web design. It doesn't matter to us whether we need to design
+        something completely new, evolve a design or implement an existing design or
+        house-style.
+        And of course our creativity goes hand in hand with our technical expertise. `,
+        leftContent: "Yes"
+    },
+    {
+        id: 14,
+        name: "About Us",
+        subtitle: "",
+        image: "/assets/images/man-desk-graphic-design.jpg",
+        aboutusComponent: true,
+        description: `The most important aspect of design is to successfully communicate
+        information. The message itself is determined by you, but the design is a vital
+        factor in just how the message is perceived by the target audience. We are experts
+        in graphic and web design. It doesn't matter to us whether we need to design
+        something completely new, evolve a design or implement an existing design or
+        house-style.
+        And of course our creativity goes hand in hand with our technical expertise. `,
+        leftContent: "Yes"
     }
 
 

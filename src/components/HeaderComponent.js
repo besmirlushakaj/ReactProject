@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ class Header extends Component {
 
         this.toggleNav = this.toggleNav.bind(this);
         this.state = {
-          isNavOpen: false
+            isNavOpen: false
         };
     }
 
@@ -58,13 +58,16 @@ class Header extends Component {
                                     <NavLink className="nav-link" to="/webdesign">
                                         <i className="fa fa-address-card fa-lg" /> WEB DESIGN
                                     </NavLink>
-                                    </NavItem>
-                                    <NavItem>
+                                    <NavLink className="nav-link" to="/aboutus">
+                                        <i className="fa fa-address-card fa-lg" /> ABOUT US
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
                                     <NavLink className="nav-link" to="/shop">
                                         <i className="fa fa-address-card fa-lg" /> SHOP
                                     </NavLink>
-                                    </NavItem>
-                                    <NavItem>
+                                </NavItem>
+                                <NavItem>
                                     <NavLink className="nav-link" to="/contactus">
                                         <i className="fa fa-address-card fa-lg" /> CONTACT
                                     </NavLink>
