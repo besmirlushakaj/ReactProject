@@ -16,5 +16,11 @@ export const IMAGEHEADER = [
         name: "contact-head-img",
         image: "/assets/images/pc5.jpg",
         imgWebComponent: true
-    }
+    },
+    {
+    id: 3,
+    name: "marketing-head-img",
+    image: "/assets/images/pc3.jpg",
+    imgMarketingComponent: true
+}
 ]

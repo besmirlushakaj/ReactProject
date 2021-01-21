@@ -6,31 +6,31 @@ import WebDelopment from './WebDelopmentComponent';
 import WebDesign from './WebDesignComponent';
 import RecruitmentSolutions from './RecruitmentSolutionsCompnent';
 import Contact from './ContactComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { CARDS } from "../shared/cards";
-import { MEDIA } from "../shared/media";
-import { CAROUSEL } from "../shared/carousel";
 import Shop from './ShopComponent';
+import Marketing from './MarketingComponent';
 import AboutUs from './AboutUsComponent';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+    return {
+        cards: state.cards,
+        carousel: state.carousel,
+        imageheader: state.imageheader,
+        media: state.media
+    };
+};
 
 
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            cards: CARDS,
-            media: MEDIA,
-            carousel: CAROUSEL
-        };
-    }
 
     render() {
         const HomePage = () => {
             return (
                 <Home
-                    cards={this.state.cards.filter(card => card.homeComponent)}
-                    carousel={this.state.carousel.filter(item => item.homeComponent)}
+                    cards={this.props.cards.filter(card => card.homeComponent)}
+                    carousel={this.props.carousel.filter(item => item.homeComponent)}
                     
                 />
             );
@@ -39,8 +39,8 @@ class Main extends Component {
         const WedDevelopmentPage = () => {
             return (
                 <WebDelopment
-                    media={this.state.media.filter(itemMedia => itemMedia.webDevelopmentComponent)}
-                    carousel={this.state.carousel.filter(item => item.webDevelopment)}
+                    media={this.props.media.filter(itemMedia => itemMedia.webDevelopmentComponent)}
+                    carousel={this.props.carousel.filter(item => item.webDevelopment)}
                 />
             );
         };
@@ -48,21 +48,31 @@ class Main extends Component {
         const WebDesignPage = () => {
             return (
                 <WebDesign
-                    media={this.state.media.filter(itemMedia => itemMedia.webDesignComponent)}
+                    media={this.props.media.filter(itemMedia => itemMedia.webDesignComponent)}
                 />
             );
         };
+
         const ShopPage = () => {
             return (
                 <Shop
-                    media={this.state.media.filter(itemMedia => itemMedia.shopComponent)}
+                    media={this.props.media.filter(itemMedia => itemMedia.shopComponent)}
                 />
             );
         };
+
+        const MarketingPage = () => {
+            return (
+                <Marketing
+                    media={this.props.media.filter(itemMedia => itemMedia.marketingComponent)}
+                />
+            );
+        };
+
         const AboutUsPage = () => {
             return (
                 <AboutUs
-                    media={this.state.media.filter(itemMedia => itemMedia.aboutusComponent)}
+                    media={this.props.media.filter(itemMedia => itemMedia.aboutusComponent)}
                 />
             );
         };
@@ -72,7 +82,7 @@ class Main extends Component {
         const RecruitmentSolutionsPage = () => {
             return (
                 <RecruitmentSolutions
-                    media={this.state.media.filter(itemMedia => itemMedia.recruitmentSolutionsComponent)}
+                    media={this.props.media.filter(itemMedia => itemMedia.recruitmentSolutionsComponent)}
                 />
             );
         };
@@ -85,6 +95,7 @@ class Main extends Component {
                     <Route path='/webdevelopment' component={WedDevelopmentPage} />
                     <Route path='/webdesign' component={WebDesignPage} />
                     <Route path='/shop' component={ShopPage} />
+                    <Route path='/marketing' component={MarketingPage} />
                     <Route path='/recruitmentsolutions' component={RecruitmentSolutionsPage} />
                     <Route exact path='/contactus' component={Contact} />
                     <Route  path='/aboutus' component={AboutUsPage} />
@@ -96,4 +107,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));
