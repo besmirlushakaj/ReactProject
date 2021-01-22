@@ -54,7 +54,7 @@ export const MEDIA = [
         image: "/assets/images/recruitment-solutions.jpg",
         recruitmentSolutionsComponent: true,
         description: `We have intensive experience in building you easy to manage recruitment platforms.
-        <br> We do this by using state of the art Applicant Tracking Systems.<br> Besides what we showcase here,
+        \n We do this by using state of the art Applicant Tracking Systems.\n  Besides what we showcase here,
         we have no problem integrated a system by your choice.`,
         
         leftContent: "Yes"
@@ -65,9 +65,9 @@ export const MEDIA = [
         subtitle:"",
         image: "/assets/images/people-top-mountain-sunset.jpg",
         recruitmentSolutionsComponent: true,
-        description: `You could almost say that recruitment solutions are our specialty.<br>
+        description: `You could almost say that recruitment solutions are our specialty.\n 
         We have a vast number of big clients for who recruitment is their primary market.
-        And they are very happy with us,<br> proving this over a long working relationship.<br>
+        And they are very happy with us,\n  proving this over a long working relationship.\n 
         Our wide range of Applicant Tracking Systems is one of the many reasons.`,
         
         leftContent: "Yes"
@@ -79,10 +79,10 @@ export const MEDIA = [
         image: "/assets/images/cameleon.jpg",
         recruitmentSolutionsComponent: true,
         description: `The clients we have a long relationship with and our new clients are equally
-        satisfied.<br>
+        satisfied.\n 
         One of the reasons is besides the packages we offer them, they are free to offer their package of choice
-        to us.<br>
-        So are the systems we have to offer not compatible with your situation? No problem,<br>
+        to us.\n 
+        So are the systems we have to offer not compatible with your situation? No problem,\n 
         we'll incorporate the system you want to use.`,
         
         leftContent: "Yes"

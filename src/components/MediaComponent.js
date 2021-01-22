@@ -218,58 +218,54 @@ export function RenderMediaAboutUsComponent({ item }) {
     return <div />
 }
 
+function NewlineText({ text }) {
+    const newText = text.split('\n').map(str => <p>{str}</p>);
+    return newText;
+}
+
 export function RenderMediaRecruitmentSolutionsComponent({ item }) {
     if (item) {
         return (
             <React.Fragment>
+
                 {
                     item.id === 5 ?
                         (
                             <React.Fragment>
-                                <div className="container-fluid">
-                                    <div className="row">
-                                        <div className="col-12 mt-3">
-                                            <div className="card">
-                                                <div className="card-horizontal">
-                                                    <div className="card shadow">
-                                                        <Media object src={item.image} alt={item.name} style={{ width: "568px", height: "350px" }} />
-                                                    </div>
-                                                    <Media body className="pl-5" style={{ backgroundColor: "lightgrey" }}>
-                                                        <Media heading tag="h1" >{item.name}</Media>
-                                                        <Media heading tag="h3" >{item.subtitle}</Media>
-                                                        {item.description}
-                                                    </Media>
-                                                </div>
-                                            </div>
+                                <div className="row row-content align-items-center mx-3" style={{ backgroundColor: "white" }}>
+                                    <div className="col-xs-12 col-sm-6 col-md-6">
+                                        <div className="card shadow">
+                                            <Media object src={item.image} alt={item.name} className="img-fluid imgTaxRefund" />
                                         </div>
                                     </div>
+                                    <Media body className="ml-5">
+                                        <Media heading tag="h1">{item.name}</Media>
+                                        <Media heading tag="h3">
+                                            <NewlineText text={item.subtitle} />
+                                        </Media>
+                                        {item.description}
+                                    </Media>
                                 </div>
                             </React.Fragment>
                         ) : (
                             <React.Fragment>
-                                <div className="container-fluid">
-                                    <div className="row">
-                                        <div className="col-12 mt-3">
-                                            <div className="card">
-                                                <div className="card-horizontal">
-                                                    <div className="card shadow">
-                                                        <Media object src={item.image} alt={item.name} style={{ width: "568px", height: "350px" }} />
-                                                    </div>
-                                                    <Media body className="ml-5">
-                                                        <Media heading tag="h1" >{item.name}</Media>
-                                                        <Media heading tag="h3" >{item.subtitle}</Media>
-                                                        {item.description}
-                                                    </Media>
-                                                </div>
-                                            </div>
+                                <div className="row row-content align-items-center mx-3">
+                                    <div className="col-xs-12 col-sm-6 col-md-6">
+                                        <div className="card shadow">
+                                            <Media object src={item.image} alt={item.name} className="img-fluid imgTaxRefund" />
                                         </div>
                                     </div>
+                                    <Media body className="ml-5">
+                                        <Media heading tag="h1" >{item.name}</Media>
+                                        <Media heading tag="h3" >{item.subtitle}</Media>
+                                        {item.description}
+                                    </Media>
                                 </div>
                             </React.Fragment>
                         )
 
                 }
-            </React.Fragment>
+            </React.Fragment >
         );
     }
     return <div />
